@@ -25,7 +25,7 @@ As you progress to working on a software project with many other people, there n
 
 For this exercise, pretend you are working with other people on a project, and the code on Github is your combined work.
 
-1. Assuming you have the repository cloned to your computer (Step 1 above), open the terminal to the respoitory's directory and type `git branch new-branch`. This will create a seperate branch with the name "new-branch". 
+1. Assuming you have the repository cloned to your computer (Step 1 above), open the terminal to the respoitory's directory and type `git branch new-branch` (You can replace new-branch with your name some other branch name).  This will create a seperate branch with the name "new-branch" or whatever name you picked. 
 
 Note: Usually, we wouldn't name a branch something as vague as "new branch" -- usually you would give the branch a name that would indicate what you were working on in that branch. For example, if you were adding the movement controls for a video game, you might name the branch "add-movement".
 
@@ -39,6 +39,10 @@ To open a **pull request**, let's do the following:
 
 1. Make sure you are in the branch you created -- Git will indicate `new-branch` rather than `main`. From the terminal, push your new branch to Github with `git push origin new-branch`
 
-2. 
+2. From here, we can switch to our browser and go to Github -- specifically, the repsoitory page for this project. This is where we'll open a PR. From the top menu, select "Pull Requests" and then, "New Pull Request".
+
+3. At the top of the new pull request screen, you'll see a graphic displaying what branch will be merged into the `main` branch. Make sure it indicates that `new-branch` is being merged into `main`. Click "Create Pull Request".
+
+4. 
 
 
