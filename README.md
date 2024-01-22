@@ -37,8 +37,8 @@ Note: Usually, we wouldn't name a branch something as vague as "new branch" -- u
 
 To open a **pull request**, let's do the following:
 
-    1. Make sure you are in the branch you created -- Git will indicate `new-branch` rather than `main`. From the terminal, push your new branch to Github with `git push origin new-branch`
+1. Make sure you are in the branch you created -- Git will indicate `new-branch` rather than `main`. From the terminal, push your new branch to Github with `git push origin new-branch`
 
-    2. 
+2. 
 
 
