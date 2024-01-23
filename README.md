@@ -41,7 +41,7 @@ Note: We normally wouldn't name a branch something as vague as "new branch" -- u
 
 ### Opening a Pull Request
 
-Now it's time to merge your code with the main branch. We *could* do this by switching back to the `main` branch, typing `git merge new-branch` and then pushing the code to Github. But this isn't how it is done in a professional setting -- instead, we want to avoid touching the `main` branch unless it's done through a pull request. A pull request is a more formal way of introducing code that notifies all other collaborators of potential changes, and provides a place where code can be tested and reviewed before it is added to the `main` branch.
+Now it's time to merge your code with the main branch. We *could* do this by switching back to the `main` branch, typing `git merge new-branch` and then pushing the code to Github. But this isn't how it is done in a professional setting -- instead, we want to avoid touching the `main` branch unless it's done through a pull request.
 
 To open a **pull request**, let's do the following:
 
