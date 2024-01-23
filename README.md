@@ -41,22 +41,24 @@ Note: We normally wouldn't name a branch something as vague as "new branch" -- u
 
 ### Opening a Pull Request
 
-Now it's time to merge your code with the main branch. We could do this by switching back to the `main` branch, typing `git merge new-branch` and then pushing the code to Github. But that's not how it is usually done in a professional setting -- instead, we want to avoid touching the `main` branch unless it's done in a way where everyone else on the project can see those changes and approve them.
+Now it's time to merge your code with the main branch. We *could* do this by switching back to the `main` branch, typing `git merge new-branch` and then pushing the code to Github. But this isn't how it is done in a professional setting -- instead, we want to avoid touching the `main` branch unless it's done through a pull request. A pull request is a more formal way of introducing code that notifies all other collaborators of potential changes, and provides a place where code can be tested and reviewed before it is added to the `main` branch.
 
 To open a **pull request**, let's do the following:
 
-4. When working with other people, you should always **pull** any changes from `main` before you **push** your code. This will ensure that any conflicts between your branch and `main` are resolved in a controlled way that doesn't introduce breaking changes to `main` after a pull request is approved. To do this, make sure you are in the branch you created -- Git will indicate `new-branch` rather than `main` -- and type `git pull origin main`. This will take any changes from the `main` branch on Github and attempt to merge them with your code.
+4. Before you push anything to Github, you should always **pull** any changes from `main`. This will ensure that any conflicts between your branch and `main` are resolved in a controlled way that doesn't introduce breaking changes to `main`, and allows for an easier approval process. To do this, make sure you have committed all your local changes and are in the branch you created -- Git will indicate `new-branch` rather than `main` -- and type `git pull origin main`. This will `pull` any changes from the `main` branch on Github made since the last time you pulled, and attempt to merge them with your code.
 
-Note: If Git completes the merge without throwing any errors, you are all set to move on to the next step. However, if you and another person have edited the same code, you will have to tell Git whose code you would like to use. This is called a **conflict**. We won't go in depth about resolving conflicts, but briefly, you'll have to manually edit the files with conflicts, then stage the changes with `add .`, and then `commit` to resolve the issue.
+Note: If Git completes the pull without throwing any errors, you are all set to move on to the next step (as long as your code still works). However, if you and another person have edited the same code, you will have to tell Git whose code you would like to use. This is called a **conflict**. We won't go in depth about resolving conflicts, but briefly, you'll have to manually edit the files with conflicts, then stage the changes with `add .`, and then `commit` to resolve the issue.
 
 5. From the terminal, push your new branch to Github with `git push origin new-branch`
 
-6. From here, we can switch to our browser and go to Github and navigate to the [repository page for this project](https://github.com/rdkelley/tulane-6100-git-practice). This is where we'll open a pull request. From the top menu, select "Pull Requests" and then, "New Pull Request".
+6. From here, we can switch to our browser and navigate to the [repository page for this project](https://github.com/rdkelley/tulane-6100-git-practice). From the top menu, select "Pull Requests" and then, "New Pull Request".
 
-7. At the top of the new pull request screen, you'll see a graphic displaying what branch will be merged into the `main` branch. Make sure it indicates that `new-branch` is being merged into `main`. Github will see if a merge can be done automatically. If it can, you'll see the words "Able to merge" in green. This is an indication that your code does not conflict with `main`. If you do not see this, it probably means you forgot to **pull** from `main` before pushing. See Step 1 of this section! Click "Create Pull Request".
+7. At the top of the new pull request screen, you'll see a graphic displaying what branch will be merged into the `main` branch. Make sure it indicates that `new-branch` is being merged into `main`. Github will see if a merge can be done automatically. If it can, you'll see the words "Able to merge" in green. This is an indication that your code does not conflict with `main`. If you do not see this, it probably means you forgot to **pull** from `main` before pushing, and that there are conflicts that should have been resolved. See Step 1 of this section!
+  
+8. Click "Create Pull Request".
 
-8. On the next screen, add a title to your PR and fill out the description. Use the title and description to describe the changes or additions made with this PR. When ready, click "Create Pull Request"
+9. On the next screen, add a title to your PR and fill out the description. Use the title and description to describe the changes or additions made with this PR. When ready, click "Create Pull Request"
 
-9. Now we wait. Usually this is when a team lead, manager or colleague reviews your changes and either approves them or starts asking questions. When the PR is approved, your code will be added to the `main` branch. For this tutorial, I'll act as the reviewer and approve your PR a few days after you submit (to simulate an overworked project lead).
+10. Now we wait. Usually this is when a team lead, manager or colleague reviews your changes and either approves them or starts asking questions. When the PR is approved, your code will be added to the `main` branch. For this tutorial, I'll act as the reviewer and approve your PR a few days after you submit (to simulate an overworked project lead).
 
 To work on the next feature or kill the next bug, start a new branch and repeat this section!
